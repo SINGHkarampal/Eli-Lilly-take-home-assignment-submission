@@ -5,7 +5,12 @@
 ***Not every section in this document is required. This is just a template to help get you started. Feel free to add or remove sections as you feel necessary.***
 
 ## Approach
-*How did you approach this challenge? Did you work through the objectives in any particular order? If so, why? Did you utilize any external resources, such as tutorials, guides, or other materials?*
+
+**Stage 1: Setup
+    - Cloned Repositery and launched Start.bash file.
+    - Verified that `GET /medicines` returns data using the browser and `/docs` using Postman.
+    - Opened `frontend/index.html` in the browser to confirm the basic page loads.
+
 
 ## Objectives - Innovative Solutions
 *For the challenge objectives, did you do anything in a particular way that you want to discuss? Is there anything you're particularly proud of that you want to highlight? Did you attempt some objectives multiple times, or go back and re-write particular sections of code? If so, why? Use this space to document any key points you'd like to tell us about.*
