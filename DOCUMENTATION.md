@@ -45,6 +45,12 @@
     - Refresh the medicines table after a successful creation so the new entry is visible immediately.
     - Updated the DOMContentLoaded handler to initialise both the table loading and the form submission handler.
 
+### Stage 6 – Search/filter functionality
+
+    - Added a simple search bar above the medicines table in `index.html`.
+    - Introduced a global `allMedicines` array and a `renderMedicines` function in `script.js` to separate rendering from data loading.
+    - Implemented `handleSearch` to filter the list of medicines on the frontend by name as the user types.
+    - Ensured that adding a new medicine reloads the data and re-applies any active search filter so the behaviour remains consistent.
 
 ## Objectives - Innovative Solutions
 *For the challenge objectives, did you do anything in a particular way that you want to discuss? Is there anything you're particularly proud of that you want to highlight? Did you attempt some objectives multiple times, or go back and re-write particular sections of code? If so, why? Use this space to document any key points you'd like to tell us about.*

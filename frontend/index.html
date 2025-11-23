@@ -18,24 +18,33 @@
 <main>
     <!-- Existing table panel -->
     <section class="panel">
-        <h2 class="panel-title">Current medicines</h2>
+    <h2 class="panel-title">Current medicines</h2>
 
-        <div class="table-container">
-            <table id="medicine-table" class="medicine-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price (£)</th>
-                    </tr>
-                </thead>
-                <tbody id="medicine-table-body">
-                    <!-- Rows will be injected by script.js -->
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <div class="search-row">
+        <label for="search-input">Search by name</label>
+        <input
+            id="search-input"
+            type="text"
+            placeholder="Type to filter medicines..."
+        />
+    </div>
 
-    <!-- New form panel -->
+    <div class="table-container">
+        <table id="medicine-table" class="medicine-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price (£)</th>
+                </tr>
+            </thead>
+            <tbody id="medicine-table-body">
+                <!-- Rows will be injected by script.js -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
     <section class="panel">
         <h2 class="panel-title">Add a new medicine</h2>
 
