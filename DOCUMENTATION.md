@@ -6,10 +6,19 @@
 
 ## Approach
 
-**Stage 1: Setup
+### Stage 1 - Setup
     - Cloned Repositery and launched Start.bash file.
     - Verified that `GET /medicines` returns data using the browser and `/docs` using Postman.
     - Opened `frontend/index.html` in the browser to confirm the basic page loads.
+
+### Stage 2 – Connect frontend to backend
+
+- Implemented an asynchronous `loadMedicines` function in `frontend/script.js`.
+- Called `GET http://localhost:8000/medicines` from the browser when the page loads.
+- Logged the raw JSON response and the `medicines` array to the console to verify the data shape.
+- Confirmed that the frontend can successfully communicate with the backend before building the UI.
+
+
 
 
 ## Objectives - Innovative Solutions
