@@ -27,6 +27,13 @@
     - Dynamically create table rows for each medicine and insert them into the page.
     - Kept console logging for debugging and to verify the data shape.
 
+### Stage 4 – Error handling and safe data rendering
+
+    - Introduced helper functions `safeName` and `formatPrice` in `frontend/script.js` to:
+    - Avoid showing `undefined` or empty strings if data is missing.
+    - Format prices consistently with a currency symbol and two decimal places.
+    - Updated the table rendering logic to use these helpers so the UI stays readable even with invalid or incomplete data.
+    - Added a simple error message element and styling so that if the API request fails (e.g. backend is not running), the user sees a clear message instead of a blank page.
 
 
 ## Objectives - Innovative Solutions

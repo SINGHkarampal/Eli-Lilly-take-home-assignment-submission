@@ -29,6 +29,9 @@ body {
     height: 30px;
 }
 
+
+/* ---- Your custom styles below ---- */
+
 /* Basic layout for main content */
 main {
     max-width: 800px;
@@ -80,4 +83,11 @@ main {
     text-align: right;
 }
 
-/* ---- Your custom styles below ---- */
+.error-message {
+    color: #b00020;         /* simple dark red */
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    max-width: 800px;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
