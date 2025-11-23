@@ -35,6 +35,16 @@
     - Updated the table rendering logic to use these helpers so the UI stays readable even with invalid or incomplete data.
     - Added a simple error message element and styling so that if the API request fails (e.g. backend is not running), the user sees a clear message instead of a blank page.
 
+### Stage 5 – Add-medicine form and create flow
+
+    - Added a simple form in `frontend/index.html` to allow the user to add a new medicine with a name and price.
+    - Implemented `handleAddMedicine` in `frontend/script.js` to:
+    - Prevent the default form submission.
+    - Send the data to the backend `/create` endpoint as form data.
+    - Show feedback messages to the user on success or failure.
+    - Refresh the medicines table after a successful creation so the new entry is visible immediately.
+    - Updated the DOMContentLoaded handler to initialise both the table loading and the form submission handler.
+
 
 ## Objectives - Innovative Solutions
 *For the challenge objectives, did you do anything in a particular way that you want to discuss? Is there anything you're particularly proud of that you want to highlight? Did you attempt some objectives multiple times, or go back and re-write particular sections of code? If so, why? Use this space to document any key points you'd like to tell us about.*
