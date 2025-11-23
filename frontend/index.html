@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Medicine Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="disclaimer" id="disclaimer">
         Disclaimer: All medicine names and prices used in this application are fictional and do not represent any real medicine(s).
     </div>
+
     <header>
         <h1>Medicine Tracker</h1>
     </header>
-    <main>
 
-    </main>
+<main>
+    <section class="panel">
+        <h2 class="panel-title">Current medicines</h2>
+
+        <div class="table-container">
+            <table id="medicine-table" class="medicine-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price (£)</th>
+                    </tr>
+                </thead>
+                <tbody id="medicine-table-body">
+                    <!-- Rows will be injected by script.js -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
     <script src="script.js"></script>
 </body>
 </html>

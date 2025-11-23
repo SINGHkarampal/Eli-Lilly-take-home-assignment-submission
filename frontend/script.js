@@ -1,23 +1,52 @@
+
 async function loadMedicines() {
   try {
     // Call the backend API
     const response = await fetch("http://localhost:8000/medicines");
 
-    // If response is not OK, throw an error
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
 
-    // Parse JSON body
     const data = await response.json();
 
-    // The backend returns an object like: { "medicines": [ ... ] } (JSON)
+    // Log for debugging 
     console.log("Raw response from /medicines:", data);
-    console.log("Medicines array:", data.medicines);
+
+    // The backend returns: { "medicines": [ { "name": "...", "price": ... }, ... ] }
+    const medicines = data.medicines || [];
+    console.log("Medicines array:", medicines);
+
+    // Find table body element
+    const tbody = document.getElementById("medicine-table-body");
+    if (!tbody) {
+      console.error("Could not find table body element with id 'medicine-table-body'");
+      return;
+    }
+
+    // Clear any existing rows
+    tbody.innerHTML = "";
+
+    // Create a row for each medicine
+    medicines.forEach((med) => {
+      const row = document.createElement("tr");
+
+      const nameCell = document.createElement("td");
+      nameCell.textContent = med.name;
+
+      const priceCell = document.createElement("td");
+      priceCell.textContent = med.price;
+      priceCell.classList.add("numeric-cell");   
+
+      row.appendChild(nameCell);
+      row.appendChild(priceCell);
+
+      tbody.appendChild(row);
+    });
   } catch (error) {
     console.error("Error loading medicines:", error);
   }
 }
 
-// Run when the HTML page has finished loading
+// Run when the page has loaded
 document.addEventListener("DOMContentLoaded", loadMedicines);

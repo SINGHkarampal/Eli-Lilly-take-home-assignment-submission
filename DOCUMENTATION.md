@@ -13,11 +13,19 @@
 
 ### Stage 2 – Connect frontend to backend
 
-- Implemented an asynchronous `loadMedicines` function in `frontend/script.js`.
-- Called `GET http://localhost:8000/medicines` from the browser when the page loads.
-- Logged the raw JSON response and the `medicines` array to the console to verify the data shape.
-- Confirmed that the frontend can successfully communicate with the backend before building the UI.
+    - Implemented an asynchronous `loadMedicines` function in `frontend/script.js`.
+    - Called `GET http://localhost:8000/medicines` from the browser when the page loads.
+    - Logged the raw JSON response and the `medicines` array to the console to verify the data shape.
+    - Confirmed that the frontend can successfully communicate with the backend before building the UI.
 
+### Stage 3 – Display medicines in the UI
+
+    - Added a table structure in `frontend/index.html` to display medicines (name and price).
+    - Updated `frontend/script.js` to:
+    - Fetch data from `GET /medicines`.
+    - Extract the `medicines` array from the JSON response.
+    - Dynamically create table rows for each medicine and insert them into the page.
+    - Kept console logging for debugging and to verify the data shape.
 
 
 
